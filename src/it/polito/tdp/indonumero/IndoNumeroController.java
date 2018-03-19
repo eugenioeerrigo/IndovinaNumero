@@ -78,6 +78,12 @@
 	    	
 	    	try {
 	    		int num = Integer.parseInt(nums);
+	    		
+	    		if(num<1 || num>NMAX) {
+	    			txtLog.appendText("Valore fuori dall'intervallo consentito.\n");
+	    			return;
+	    		}
+	    		
 	    		if(num==this.segreto) {
 	    			txtLog.appendText("Hai vinto!");
 	    			//chiudere la partita
